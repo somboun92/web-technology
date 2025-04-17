@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: testdb
+    networks:
+      - app_network
+
+  php:
+    image: php:8.2-apache   # ใช้ php:8.2-apache ที่มีอยู่จริง
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html
+    environment:
+      DB_USER: root
+      DB_NAME: testdb
+      DB_HOST: db
+      DB_PASSWORD: root
+    depends_on:
+      - db
+    command: >
+      bash -c "docker-php-ext-install pdo pdo_mysql && apache2-foreground"
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
