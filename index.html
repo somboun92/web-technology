@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+
+<body class="font-['Inter'] font-[400] bg-[var(--dark-0)] [&_*]:text-[var(--white)] [&_*]:no-underline">
+  <!-- add styles for other displays in the end -->
+  <header class="
+  py-[20px] w-full bg-[var(--dark-1)] flex items-center justify-center lg:py-[16px]
+  ">
+    <!-- There's build-in .container class in Tailwind CSS -->
+    <div class="flex items-center justify-between gap-4 container mx-auto px-5 lg:px-0">
+      <img src="./assets/logo/logo.svg" alt="logotype" class="h-12 lg:h-16">
+      <!-- Hidden on desktop, visible on mobile devices -->
+      <div class="hidden items-center gap-6 lg:flex">
+        <a href="#" class="text-[1.167rem] hover:underline visited:text-purple-900">Catalog</a>
+        <a href="#" class="text-[1.167rem] hover:underline visited:text-purple-900">FAQ</a>
+        <a href="#" class="text-[1.167rem] hover:underline visited:text-purple-900">Contacts</a>
+      </div>
+      <!-- Hidden on desktop, visible on mobile devices -->
+      <div class="hidden items-center gap-2 lg:flex">
+        <!-- Outlined button -->
+        <button class="
+          flex items-center justify-center gap-4 w-fit transition text-[var(--white)] font-[500] cursor-pointer border
+          focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+          active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+          hover:transition-150
+          py-[0.667rem] px-4 
+          rounded-[8px]
+          bg-none border-[var(--brand-9)]
+          hover:bg-[var(--brand-8)] hover:border-[var(--brand-8)]
+        ">
+          Sign in
+        </button>
+        <!-- Default button -->
+        <button class="
+          flex items-center justify-center gap-4 w-fit transition text-[var(--white)] font-[500] cursor-pointer border
+          focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+          active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+          hover:transition-150
+          py-[0.667rem] px-4 
+          rounded-[8px]
+          bg-[var(--brand-9)] border-[var(--brand-9)]
+          hover:bg-[var(--brand-8)] hover:border-[var(--brand-8)]
+        ">
+          Create account
+        </button>
+      </div>
+      <!-- Hidden on desktop, visible on mobile devices -->
+      <!-- Transparent button -->
+      <button class="
+        flex items-center justify-center gap-4 w-fit transition text-[var(--white)] font-[500] cursor-pointer border
+        focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+        active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+        hover:transition-150
+        p-[0.35rem] 
+        rounded-[6px]
+        bg:none border-transparent 
+        hover:bg-[var(--brand-5)] hover:border-[var(--brand-5)]
+        lg:hidden
+      ">
+        <img src="./assets/icons/dehaze.svg" alt="burger_menu_icon">
+      </button>
+    </div>
+  </header>
+  <main>
+    <section
+      class="w-full aspect-[9/5] bg-cover bg-no-repeat bg-center bg-[url('./assets/card/car.jpg')] lg:h-[300px]">
+      <div class="container mx-auto px-5 lg:px-0 flex flex-col items-center justify-center w-full h-full gap-5 py-3">
+        <h1 class="font-bold text-[2.5rem] text-center">Our Teslas are 50% cheaper</h1>
+        <a href="#catalog" class="
+          flex items-center justify-center gap-4 transition text-[var(--white)] font-[500] cursor-pointer border
+          focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+          active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+          hover:transition-150
+          py-[0.667rem] px-4 
+          rounded-[8px]
+          bg-[var(--brand-9)] border-[var(--brand-9)]
+          hover:bg-[var(--brand-8)] hover:border-[var(--brand-8)]
+          w-[150px]
+        ">
+          Get the Tesla
+        </a>
+      </div>
+    </section>
+    <section class="pt-8" id="catalog">
+      <div class="container mx-auto px-3 lg:px-0">
+        <h2 class="font-bold text-[1.75rem]">Catalog</h2>
+        <div class="
+          mt-5 grid grid-cols-2 gap-[0.667rem] lg:grid-cols-4
+        ">
+          <article class="bg-[var(--dark-1)] border border-[var(--dark-2)] overflow-hidden rounded-[8px]">
+            <img src="./assets/card/car.jpg" alt="tesla" class="w-full object-cover aspect-[3/2]">
+            <div class="p-2">
+              <p class="text-[1rem] text-[var(--gray-6)]">
+                Tesla model x
+              </p>
+              <p class="font-[600] text-[var(--gray-4)] text-[1.333rem] mt-2">
+                $3000
+              </p>
+              <button class="
+                flex items-center justify-center gap-4 transition text-[var(--white)] font-[500] cursor-pointer border
+                focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+                active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+                hover:transition-150
+                py-[0.667rem] px-4 
+                rounded-[8px]
+                bg-none border-[var(--brand-9)]
+                hover:bg-[var(--brand-8)] hover:border-[var(--brand-8)]  
+                mt-3 w-full
+              ">
+                Add to cart
+              </button>
+            </div>
+          </article>
+          <article class="bg-[var(--dark-1)] border border-[var(--dark-2)] overflow-hidden rounded-[8px]">
+            <img src="./assets/card/car.jpg" alt="tesla" class="w-full object-cover aspect-[3/2]">
+            <div class="p-2">
+              <p class="text-[1rem] text-[var(--gray-6)]">
+                Tesla model x
+              </p>
+              <p class="font-[600] text-[var(--gray-4)] text-[1.333rem] mt-2">
+                $3000
+              </p>
+              <button class="
+                flex items-center justify-center gap-4 w-fit transition text-[var(--white)] font-[500] cursor-pointer border
+                focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+                active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+                hover:transition-150
+                py-[0.667rem] px-4 
+                rounded-[8px]
+                bg-none border-[var(--brand-9)]
+                hover:bg-[var(--brand-8)] hover:border-[var(--brand-8)]  
+                mt-3 w-full
+              ">
+                Add to cart
+              </button>
+            </div>
+          </article>
+          <article class="bg-[var(--dark-1)] border border-[var(--dark-2)] overflow-hidden rounded-[8px]">
+            <img src="./assets/card/car.jpg" alt="tesla" class="w-full object-cover aspect-[3/2]">
+            <div class="p-2">
+              <p class="text-[1rem] text-[var(--gray-6)]">
+                Tesla model x
+              </p>
+              <p class="font-[600] text-[var(--gray-4)] text-[1.333rem] mt-2">
+                $3000
+              </p>
+              <button class="
+                flex items-center justify-center gap-4 w-fit transition text-[var(--white)] font-[500] cursor-pointer border
+                focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+                active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+                hover:transition-150
+                py-[0.667rem] px-4 
+                rounded-[8px]
+                bg-none border-[var(--brand-9)]
+                hover:bg-[var(--brand-8)] hover:border-[var(--brand-8)]  
+                mt-3 w-full
+              ">
+                Add to cart
+              </button>
+            </div>
+          </article>
+          <article class="bg-[var(--dark-1)] border border-[var(--dark-2)] overflow-hidden rounded-[8px]">
+            <img src="./assets/card/car.jpg" alt="tesla" class="w-full object-cover aspect-[3/2]">
+            <div class="p-2">
+              <p class="text-[1rem] text-[var(--gray-6)]">
+                Tesla model x
+              </p>
+              <p class="font-[600] text-[var(--gray-4)] text-[1.333rem] mt-2">
+                $3000
+              </p>
+              <button class="
+                flex items-center justify-center gap-4 w-fit transition text-[var(--white)] font-[500] cursor-pointer border
+                focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+                active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+                hover:transition-150
+                py-[0.667rem] px-4 
+                rounded-[8px]
+                bg-none border-[var(--brand-9)]
+                hover:bg-[var(--brand-8)] hover:border-[var(--brand-8)]  
+                mt-3 w-full
+              ">
+                Add to cart
+              </button>
+            </div>
+          </article>
+          <article class="bg-[var(--dark-1)] border border-[var(--dark-2)] overflow-hidden rounded-[8px]">
+            <img src="./assets/card/car.jpg" alt="tesla" class="w-full object-cover aspect-[3/2]">
+            <div class="p-2">
+              <p class="text-[1rem] text-[var(--gray-6)]">
+                Tesla model x
+              </p>
+              <p class="font-[600] text-[var(--gray-4)] text-[1.333rem] mt-2">
+                $3000
+              </p>
+              <button class="
+                flex items-center justify-center gap-4 w-fit transition text-[var(--white)] font-[500] cursor-pointer border
+                focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+                active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+                hover:transition-150
+                py-[0.667rem] px-4 
+                rounded-[8px]
+                bg-none border-[var(--brand-9)]
+                hover:bg-[var(--brand-8)] hover:border-[var(--brand-8)]  
+                mt-3 w-full
+              ">
+                Add to cart
+              </button>
+            </div>
+          </article>
+          <article class="bg-[var(--dark-1)] border border-[var(--dark-2)] overflow-hidden rounded-[8px]">
+            <img src="./assets/card/car.jpg" alt="tesla" class="w-full object-cover aspect-[3/2]">
+            <div class="p-2">
+              <p class="text-[1rem] text-[var(--gray-6)]">
+                Tesla model x
+              </p>
+              <p class="font-[600] text-[var(--gray-4)] text-[1.333rem] mt-2">
+                $3000
+              </p>
+              <button class="
+                flex items-center justify-center gap-4 w-fit transition text-[var(--white)] font-[500] cursor-pointer border
+                focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+                active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+                hover:transition-150
+                py-[0.667rem] px-4 
+                rounded-[8px]
+                bg-none border-[var(--brand-9)]
+                hover:bg-[var(--brand-8)] hover:border-[var(--brand-8)]  
+                mt-3 w-full
+              ">
+                Add to cart
+              </button>
+            </div>
+          </article>
+        </div>
+        <a href="/catalog" class="
+          flex items-center justify-center gap-4 w-fit transition text-[var(--white)] font-[500] cursor-pointer border
+          focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+          active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+          hover:transition-150
+          py-[0.667rem] px-4 
+          rounded-[8px]
+          bg-[var(--brand-9)] border-[var(--brand-9)]
+          hover:bg-[var(--brand-8)] hover:border-[var(--brand-8)]
+          w-full mt-6
+        ">See more</a>
+      </div>
+    </section>
+    <section class="pt-12">
+      <div class="container mx-auto px-3 lg:px-0">
+        <h2 class="font-bold text-[1.75rem]">FAQ</h2>
+        <div class="[&_.faqItem+.faqItem]:mt-4 mt-5 lg:[&_.faqItem+.faqItem]:mt-0 lg:grid lg:grid-cols-3 lg:gap-8">
+          <div class="w-full faqItem">
+            <button class="
+              flex items-center justify-center gap-4 w-fit transition text-[var(--white)] font-[500] cursor-pointer border
+              focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+              active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+              hover:transition-150
+              p-[0.35rem] 
+              rounded-[6px]
+              bg:none border-transparent 
+              hover:bg-[var(--brand-5)] hover:border-[var(--brand-5)]
+              w-full px-2 py-0 flex items-center justify-between gap-4
+            ">
+              <span>Question</span>
+              <img src="./assets/icons/add.svg" alt="add_icon" class="w-8 aspect-square">
+            </button>
+            <div class="hidden">
+              <p>Answer</p>
+            </div>
+          </div>
+          <div class="w-full faqItem">
+            <button class="
+              flex items-center justify-center gap-4 w-fit transition text-[var(--white)] font-[500] cursor-pointer border
+              focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+              active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+              hover:transition-150
+              p-[0.35rem] 
+              rounded-[6px]
+              bg:none border-transparent 
+              hover:bg-[var(--brand-5)] hover:border-[var(--brand-5)]
+              w-full px-2 py-0 flex items-center justify-between gap-4
+            ">
+              <span>Question</span>
+              <img src="./assets/icons/add.svg" alt="add_icon" class="w-8 aspect-square">
+            </button>
+            <div class="hidden">
+              <p>Answer</p>
+            </div>
+          </div>
+          <div class="w-full faqItem">
+            <button class="
+              flex items-center justify-center gap-4 w-fit transition text-[var(--white)] font-[500] cursor-pointer border
+              focus-visible:outline focus-visible:outline-[var(--brand-9)] focus-visible:outline-offset-2
+              active:bg-[var(--brand-9)] active:border-[var(--brand-9)]
+              hover:transition-150
+              p-[0.35rem] 
+              rounded-[6px]
+              bg:none border-transparent 
+              hover:bg-[var(--brand-5)] hover:border-[var(--brand-5)]
+              w-full px-2 py-0 flex items-center justify-between gap-4
+            ">
+              <span>Question</span>
+              <img src="./assets/icons/add.svg" alt="add_icon" class="w-8 aspect-square">
+            </button>
+            <div class="hidden">
+              <p>Answer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- footer element contains selectors for child elements (they're starting from & symbol) -->
+  <footer class="pt-10 pb-14 bg-[var(--dark-1)] mt-20 [&_.footerItem+.footerItem]:mt-5 [&>.container+.container]:mt-10">
+    <div class="container mx-auto px-3 lg:px-0">
+      <div class="footerItem">
+        <img src="./assets/logo/logo.svg" alt="logotype" class="h-16">
+      </div>
+      <div class="footerItem grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div>
+          <p class="font-[500] text-[var(--gray-3)] text-[1.333rem]">
+            For clients
+          </p>
+          <div class="flex flex-col gap-2 mt-3 [&>a]:text-[1.167rem] [&>a]:text-[var(--gray-6)]">
+            <a href="/some-page">Addresses</a>
+            <a href="/some-page">Discount program</a>
+            <a href="/some-page">Money refund</a>
+          </div>
+        </div>
+        <div>
+          <p class="font-[500] text-[var(--gray-3)] text-[1.333rem]">
+            For clients
+          </p>
+          <div class="flex flex-col gap-2 mt-3 [&>a]:text-[1.167rem] [&>a]:text-[var(--gray-6)]">
+            <a href="/some-page">Addresses</a>
+            <a href="/some-page">Discount program</a>
+            <a href="/some-page">Money refund</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto px-3 lg:px-0 flex gap-4 items-center justify-between">
+      <span class="text-[1.167rem] text-[var(--gray-8)]">© CheapTesla, 2025</span>
+      <div class="flex items-center gap-3">
+        <a class="aspect-square w-5" href="https://t.me/cheapteslafakecompany123">
+          <img src="./assets/icons/telegram.svg" alt="telegram_icon">
+        </a>
+        <a class="aspect-square w-5" href="https://wa.me/cheapteslafakecompany123">
+          <img src="./assets/icons/whatsapp.svg" alt="whatsapp_icon">
+        </a>
+        <a class="aspect-square w-5" href="https://youtube/cheapteslafakecompany123">
+          <img src="./assets/icons/youtube.svg" alt="youtube_icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

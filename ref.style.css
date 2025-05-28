@@ -1,0 +1,333 @@
+body {
+  /* define the default font */
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background-color: var(--dark-0);
+}
+
+html {
+  /* 
+  define rem size in px 
+  when you will develop styles for other devices
+  you can just change this value using @media rule
+  and all font sizes will change on all website
+  */
+  font-size: 12px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.333rem;
+}
+
+h2 {
+  font-size: 2.167rem;
+}
+
+a.link {
+  font-size: 1.167rem;
+}
+
+a.link:hover {
+  text-decoration: underline;
+}
+
+a.link:visited {
+  /* tip: you can define your variable like purple-9 */
+  color: purple;
+}
+
+/* button */
+
+.btn {
+  /* to reduce problems when we use <a> tag */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: fit-content;
+  padding: 0.667rem 1rem;
+  background: var(--brand-9);
+  border: 1px solid var(--brand-9);
+  border-radius: 8px;
+  transition: 0.3s ease-out;
+  /* button's text styles */
+  color: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* to not have hover on touch screen devices */
+@media (hover: hover) {
+  .btn:hover {
+    /* to make activation (click) effect faster */
+    transition: 0.1s ease-out;
+    background: var(--brand-8);
+    border: 1px solid var(--brand-8);
+  }
+}
+
+.btn:active {
+  background: var(--brand-9);
+  border: 1px solid var(--brand-9);
+}
+
+.btn:focus-visible {
+  outline: 1px solid var(--brand-9);
+  outline-offset: 2px;
+}
+
+/* outlined button styles */
+
+.btn.outlined {
+  background: none;
+  border: 1px solid var(--brand-9);
+}
+
+@media (hover: hover) {
+  .btn.outlined:hover {
+    background: var(--brand-8);
+    border: 1px solid var(--brand-8);
+  }
+}
+
+.btn.outlined:active {
+  background: var(--brand-9);
+  border: 1px solid var(--brand-9);
+}
+
+/* transparent button styles */
+
+.btn.transparent {
+  background: none;
+  border: 1px solid #ffffff00;
+}
+
+@media (hover: hover) {
+  .btn.transparent:hover {
+    background: var(--dark-5);
+    border: 1px solid var(--dark-5);
+  }
+}
+
+.btn.transparent:active {
+  background: var(--dark-1);
+  border: 1px solid var(--dark-1);
+}
+
+/* for icon button */
+.btn.icon {
+  padding: 0.35rem;
+  border-radius: 6px;
+}
+
+/* additional btn styles */
+.btn.full_width {
+  width: 100%;
+}
+
+header {
+  padding: 20px 0;
+  width: 100%;
+  background: var(--dark-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* minimal gap */
+  gap: 1rem;
+}
+
+.card {
+  /* 
+  you just can set aspect-ratio & 100% width
+  height will be calculated according to aspect-ratio
+  */
+  width: 100%;
+  aspect-ratio: 9/5;
+  /* setting bg image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('./assets/images/card/tesla.png');
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  padding-top: 12px;
+}
+
+/* styles for h1 and .btn that will be only in .card__content class block */
+.card__content>h1 {
+  text-align: center;
+}
+
+.card__content>.btn {
+  width: 150px;
+}
+
+.product_card {
+  background: var(--dark-1);
+  border: 1px solid var(--dark-2);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.product_card__cover {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 3/2;
+
+}
+
+.product_card__info {
+  padding: 6px;
+}
+
+.product_card__name {
+  font-size: 1rem;
+  color: var(--gray-6);
+}
+
+.product_card__price {
+  font-weight: 600;
+  color: var(--gray-4);
+  font-size: 1.333rem;
+  margin-top: 6px;
+}
+
+.product_card .btn {
+  margin-top: 14px;
+}
+
+.catalog__wrapper {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.667rem;
+  row-gap: 0.667rem;
+}
+
+.catalog {
+  padding-top: 30px;
+}
+
+.catalog>.container>.btn {
+  margin-top: 16px;
+}
+
+.faq {
+  padding-top: 50px;
+}
+
+.faq__wrapper {
+  margin-top: 20px;
+}
+
+.faq_item {
+  width: 100%;
+}
+
+.faq_item__button {
+  padding-block: 8px;
+  padding-inline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faq_item__icon {
+  width: 2rem;
+  aspect-ratio: 1/1;
+}
+
+.faq_item__answer {
+  /* hide when closed */
+  display: none;
+}
+
+.faq_item+.faq_item {
+  margin-top: 16px;
+}
+
+footer {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  background: var(--dark-1);
+  margin-top: 80px;
+}
+
+.footer__item+.footer__item {
+  margin-top: 20px;
+}
+
+.footer__logo {
+  height: 60px;
+}
+
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.footer__links__item__title {
+  font-weight: 500;
+  color: var(--gray-3);
+  font-size: 1.333rem;
+}
+
+.footer__links__item__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.footer__links__item__wrapper>a {
+  font-size: 1.167rem;
+  color: var(--gray-6);
+}
+
+.footer__sign {
+  font-size: 1.167rem;
+  color: var(--gray-8);
+}
+
+.footer__credentials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer__icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer_icon {
+  width: 20px;
+  height: 20px;
+}
+
+footer>.container+.container {
+  margin-top: 40px;
+}
